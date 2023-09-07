@@ -1,0 +1,14 @@
+D:\Desarrollos\LinqNetPlatzi\bin\Debug\net7.0\LinqNetPlatzi.exe
+D:\Desarrollos\LinqNetPlatzi\bin\Debug\net7.0\LinqNetPlatzi.deps.json
+D:\Desarrollos\LinqNetPlatzi\bin\Debug\net7.0\LinqNetPlatzi.runtimeconfig.json
+D:\Desarrollos\LinqNetPlatzi\bin\Debug\net7.0\LinqNetPlatzi.dll
+D:\Desarrollos\LinqNetPlatzi\bin\Debug\net7.0\LinqNetPlatzi.pdb
+D:\Desarrollos\LinqNetPlatzi\obj\Debug\net7.0\LinqNetPlatzi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desarrollos\LinqNetPlatzi\obj\Debug\net7.0\LinqNetPlatzi.AssemblyInfoInputs.cache
+D:\Desarrollos\LinqNetPlatzi\obj\Debug\net7.0\LinqNetPlatzi.AssemblyInfo.cs
+D:\Desarrollos\LinqNetPlatzi\obj\Debug\net7.0\LinqNetPlatzi.csproj.CoreCompileInputs.cache
+D:\Desarrollos\LinqNetPlatzi\obj\Debug\net7.0\LinqNetPlatzi.dll
+D:\Desarrollos\LinqNetPlatzi\obj\Debug\net7.0\refint\LinqNetPlatzi.dll
+D:\Desarrollos\LinqNetPlatzi\obj\Debug\net7.0\LinqNetPlatzi.pdb
+D:\Desarrollos\LinqNetPlatzi\obj\Debug\net7.0\LinqNetPlatzi.genruntimeconfig.cache
+D:\Desarrollos\LinqNetPlatzi\obj\Debug\net7.0\ref\LinqNetPlatzi.dll
