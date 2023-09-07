@@ -13,7 +13,8 @@ LinqQueries queries = new LinqQueries();
 //PrintValues(queries.LibrosJavaOrdenadosxPaginasDesc());
 //PrintValues(queries.TresLibrosJavaMasRecientes());
 //PrintValues(queries.TerceryCuartoLibroconmas400Hojas());
-PrintValues(queries.LosPrimeros3LibrosSoloNombreyPag());
+//PrintValues(queries.LosPrimeros3LibrosSoloNombreyPag());
+Console.WriteLine($"Numero de paginas entre 200 y 500 Pag - {(queries.NumeroLibrosEntre200y500IntCorrecto())}");
 
 void PrintValues(IEnumerable<Book> ListBooks){
 

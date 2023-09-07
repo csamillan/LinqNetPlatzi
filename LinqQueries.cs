@@ -67,4 +67,21 @@ public class LinqQueries{
                             .Select(p => new Book() {Title = p.Title, PageCount = p.PageCount});
 
     }
+
+    //este forma de contar es una mala practica
+    public int NumeroLibrosEntre200y500Int(){
+        return BoookCollection.Where(p=> p.PageCount >= 200 && p.PageCount <= 500).Count();
+    }
+
+    public long NumeroLibrosEntre200y500(){
+        return BoookCollection.Where(p=> p.PageCount >= 200 && p.PageCount <= 500).LongCount();
+    }
+    //Forma correcta de contar
+    public int NumeroLibrosEntre200y500IntCorrecto(){
+        return BoookCollection.Count(p=> p.PageCount >= 200 && p.PageCount <= 500);
+    }
+
+    public long NumeroLibrosEntre200y500Correcto(){
+        return BoookCollection.LongCount(p=> p.PageCount >= 200 && p.PageCount <= 500);
+    }
 }
