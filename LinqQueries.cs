@@ -84,4 +84,56 @@ public class LinqQueries{
     public long NumeroLibrosEntre200y500Correcto(){
         return BoookCollection.LongCount(p=> p.PageCount >= 200 && p.PageCount <= 500);
     }
+
+    public DateTime MenorFechadePublicacion(){
+        return BoookCollection.Min(p => p.PublishedDate);
+    }
+
+    public int MayorCantidadDePaginas(){
+        return BoookCollection.Max(p => p.PageCount);
+    }
+
+    public Book MenosCantidadDePaginasConPagMayorA0(){
+        return BoookCollection.Where(p => p.PageCount > 0).MinBy(p => p.PageCount);
+    }
+
+    public Book LibroConFechaMasReciente(){
+        return BoookCollection.MaxBy(p => p.PublishedDate);
+    }
+
+    public int SumaLibrosDePag0A500(){
+        return BoookCollection.Where(p => p.PageCount >= 0 && p.PageCount <= 500).Sum(p => p.PageCount);
+    }
+
+    public string LibrosDespuesDel2015Concatenados(){
+        return BoookCollection.Where(p => p.PublishedDate.Year > 2015)
+                            .Aggregate("",(TitulosLibros, next) => {
+                                if(TitulosLibros != string.Empty){
+                                    TitulosLibros += " - " + next.Title;
+                                }else{
+                                    TitulosLibros += next.Title;
+                                }
+
+                                return TitulosLibros;
+                            });
+    }
+
+    public double PromedioCaracteresTitulo(){
+        return BoookCollection.Average(p => p.Title.Length);
+    }
+
+    public IEnumerable<IGrouping<int,Book>> LibrosDespuesDel2000AgrupadosPorAno(){
+        return BoookCollection.Where(p => p.PublishedDate.Year >= 2000).GroupBy(p => p.PublishedDate.Year);
+    }
+
+    public ILookup<char,Book> DiccionarioDeLibrosPorLetra(){
+        return BoookCollection.ToLookup(p => p.Title[0], p => p);
+    }
+
+    public IEnumerable<Book> LibrosDespuesDel2005YMasDe500Pag(){
+        var LibrosDespuesDel2005 = BoookCollection.Where(p => p.PublishedDate.Year > 2005);
+        var LibrosConMasDe500Pag = BoookCollection.Where(p => p.PageCount > 500);
+
+        return LibrosDespuesDel2005.Join(LibrosConMasDe500Pag, p => p.Title, x => x.Title, (p,x) => p);
+    }
 }
